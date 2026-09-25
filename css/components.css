@@ -1,0 +1,208 @@
+/* ==========================================================================
+   SIDEBAR — brand, navigasi, toggle tema
+   ========================================================================== */
+   .brand{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .brand-identity{ display: flex; align-items: center; gap: .65rem; }
+  .brand-mark{
+    width: 34px; height: 34px; border-radius: 9px; flex: none;
+    background: linear-gradient(135deg, var(--primary-color-light), var(--primary-color));
+    display: grid; place-items: center;
+    font-weight: 700; font-size: .8rem; color: #fff;
+  }
+  .brand-mark svg{ display: block; }
+  .brand h2{ font-size: 1.05rem; font-weight: 700; color: #fff; letter-spacing: .2px; }
+  
+  .hamburger-btn, .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+  }
+  .close-btn { color: #fff; display: none; }
+  
+  .nav-links{ display: flex; flex-direction: column; gap: 3px; flex: 1; }
+  .nav-links a{
+    display: flex; align-items: center; gap: .75rem;
+    padding: .65rem .8rem; border-radius: var(--radius-s);
+    color: #aab6d6; font-size: .92rem; font-weight: 500;
+    transition: background-color .15s ease, color .15s ease;
+  }
+  .nav-links a:hover{ background: var(--bg-sidebar-hover); color: #fff; }
+  .nav-links li.active a{
+    background: var(--primary-color); color: #fff; font-weight: 600;
+    box-shadow: 0 4px 14px -4px rgba(53,98,232,.6);
+  }
+  
+  .theme-toggle-container{
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: var(--spacing-md); margin-top: var(--spacing-sm);
+    border-top: 1px solid rgba(255,255,255,.08);
+    font-size: .85rem; color: #aab6d6;
+  }
+  .theme-btn{
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--bg-sidebar-hover); border: none; color: #fff;
+    font-size: 1rem; display: grid; place-items: center;
+    transition: transform .15s ease;
+  }
+  .theme-btn:hover{ transform: scale(1.08); }
+  
+  /* ==========================================================================
+     TOPBAR — search, notifikasi, profil
+     ========================================================================== */
+  .search-bar{
+    flex: 1; max-width: 420px;
+    display: flex; align-items: center; gap: .5rem;
+    background: var(--bg-surface-2); border: 1px solid var(--border-color);
+    border-radius: 99px; padding: .55rem .95rem;
+  }
+  .search-bar::before{ content: "🔍"; font-size: .85rem; opacity: .6; }
+  .search-bar input{
+    border: none; background: none; outline: none; width: 100%;
+    font: inherit; color: var(--text-primary);
+  }
+  .search-bar input::placeholder{ color: var(--text-muted); }
+  
+  .user-profile{ display: flex; align-items: center; gap: var(--spacing-sm); }
+  
+  .notification-icon{
+    position: relative; font-size: 1.15rem; color: var(--text-secondary);
+  }
+  .notification-icon .badge{
+    position: absolute; top: -6px; right: -8px;
+    background: var(--red-500); color: #fff;
+    font-size: .62rem; min-width: 16px; height: 16px; border-radius: 99px;
+    display: grid; place-items: center; padding: 0 3px;
+  }
+  
+  .avatar{
+    width: 38px; height: 38px; border-radius: 50%; flex: none;
+    background: linear-gradient(135deg, var(--amber-500), var(--primary-color-light));
+    display: grid; place-items: center;
+    color: #fff; font-weight: 700; font-size: .82rem;
+  }
+  
+  .user-info{ display: flex; flex-direction: column; line-height: 1.25; }
+  .user-name{ font-weight: 600; font-size: .9rem; color: var(--text-primary); }
+  .user-role{ font-size: .75rem; color: var(--text-muted); }
+  
+  /* ==========================================================================
+     WELCOME BANNER
+     ========================================================================== */
+  .welcome-banner{
+    background: linear-gradient(120deg, var(--bg-sidebar), #1e2d4f);
+    color: #fff; border-radius: var(--radius-l); padding: var(--spacing-lg);
+  }
+  .welcome-banner h1{ font-size: var(--font-size-h1); margin-bottom: .35rem; }
+  .welcome-banner p{ color: #c3cdea; max-width: 46ch; }
+  
+  /* ==========================================================================
+     STAT CARDS
+     ========================================================================== */
+  .stat-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-card);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .stat-icon{
+    width: 46px; height: 46px; border-radius: 12px; flex: none;
+    display: grid; place-items: center; font-size: 1.15rem; color: #fff;
+  }
+  .stat-value{ font-size: 1.5rem; font-weight: 700; line-height: 1.15; color: var(--text-primary); }
+  .stat-label{ font-size: .82rem; color: var(--text-secondary); }
+  .stat-trend{ font-size: .74rem; color: var(--green-600); margin-top: .15rem; }
+  
+  /* ==========================================================================
+     CARD / PANEL (Jadwal, Nilai, Pengumuman)
+     ========================================================================== */
+  .card {
+    background-color: var(--bg-surface);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    padding: var(--spacing-md);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .9rem;
+  }
+  .card-header h3{ font-size: .98rem; font-weight: 600; }
+  .view-all{ font-size: .78rem; font-weight: 600; color: var(--primary-color); }
+  
+  /* Fitur CSS Modern: CSS Nesting & Pseudo-class :has() */
+  .list-item {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+  
+    &:last-child {
+      border-bottom: none;
+    }
+  
+    /* Jika elemen list-item memiliki anak penanda "urgent", beri aksen kiri
+       tanpa perlu class tambahan lewat JavaScript */
+    &:has(.urgent) {
+      border-left: 4px solid var(--red-500);
+      padding-left: 8px;
+      margin-left: -12px;
+    }
+  }
+  .urgent{ display: none; } /* elemen penanda saja, tidak dirender visual */
+  
+  .dot-status{ width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .list-main{ display: flex; flex-direction: column; line-height: 1.35; flex: 1; min-width: 0; }
+  .list-main strong{ font-size: .88rem; font-weight: 600; }
+  .list-main small{ color: var(--text-muted); font-size: .78rem; }
+  .list-time{ color: var(--text-muted); font-size: .78rem; white-space: nowrap; }
+  
+  .grade-badge{
+    font-weight: 700; font-size: .85rem; min-width: 34px; height: 30px;
+    border-radius: 8px; padding: 0 8px;
+    display: grid; place-items: center;
+    background: var(--bg-surface-2); color: var(--text-primary);
+  }
+  
+  /* ==========================================================================
+     MOBILE BOTTOM NAV
+     ========================================================================== */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    color: var(--text-muted);
+    font-size: .68rem;
+  }
+  .nav-item span{ font-size: 1.05rem; }
+  .nav-item.active { color: var(--primary-color); font-weight: 700; }

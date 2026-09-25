@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniCampus - Dashboard Akademik</title>
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="dashboard-container">
+
+    <!-- Semantic Navigation -->
+    <nav class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-identity">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3Z" fill="#fff"/>
+              <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z" fill="#fff"/>
+            </svg>
+          </span>
+          <h2>UniCampus</h2>
+        </div>
+        <button class="close-btn" id="closeSidebar" aria-label="Tutup Menu">&times;</button>
+      </div>
+
+      <ul class="nav-links">
+        <li class="active"><a href="#">📊 Dashboard</a></li>
+        <li><a href="#">👤 Mahasiswa</a></li>
+        <li><a href="#">📖 Mata Kuliah</a></li>
+        <li><a href="#">📝 KRS</a></li>
+        <li><a href="#">📑 Nilai</a></li>
+        <li><a href="#">📅 Jadwal</a></li>
+        <li><a href="#">💳 Pembayaran</a></li>
+        <li><a href="#">📢 Pengumuman</a></li>
+      </ul>
+
+      <!-- Fitur Dark/Light Mode -->
+      <div class="theme-toggle-container">
+        <span>Mode Gelap</span>
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+      </div>
+    </nav>
+
+    <div class="main-wrapper">
+
+      <!-- Semantic Header -->
+      <header class="top-header">
+        <button class="hamburger-btn" id="menuToggle" aria-label="Buka Menu" aria-expanded="false">☰</button>
+
+        <div class="search-bar">
+          <input type="search" placeholder="Cari mahasiswa, mata kuliah, atau informasi...">
+        </div>
+
+        <div class="user-profile">
+          <div class="notification-icon">🔔<span class="badge">3</span></div>
+          <span class="avatar" aria-hidden="true">RK</span>
+          <div class="user-info">
+            <span class="user-name">Ricardo Kaka</span>
+            <span class="user-role">Mahasiswa</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Semantic Main Content -->
+      <main class="content-area">
+
+        <!-- Welcome Section -->
+        <section class="welcome-banner">
+          <h1>Selamat Datang, Ricardo Kaka 👋</h1>
+          <p>Terus belajar, raih masa depan yang lebih baik!</p>
+        </section>
+
+        <!-- Stats Grid Section -->
+        <section class="stats-grid" id="statsContainer">
+          <!-- Rendered dynamically by JavaScript -->
+        </section>
+
+        <!-- Dashboard Multi-column Content -->
+        <div class="dashboard-grid">
+
+          <section class="card schedule-card">
+            <div class="card-header">
+              <h3>📅 Jadwal Hari Ini</h3>
+              <a href="#" class="view-all">Lihat Semua</a>
+            </div>
+            <div class="card-body" id="scheduleContainer">
+              <!-- Rendered dynamically by JavaScript -->
+            </div>
+          </section>
+
+          <section class="card grades-card">
+            <div class="card-header">
+              <h3>📑 Nilai Terbaru</h3>
+              <a href="#" class="view-all">Lihat Semua</a>
+            </div>
+            <div class="card-body" id="gradesContainer">
+              <!-- Rendered dynamically by JavaScript -->
+            </div>
+          </section>
+
+          <!-- Semantic Article for Announcements -->
+          <article class="card announcement-card">
+            <div class="card-header">
+              <h3>📢 Pengumuman</h3>
+            </div>
+            <div class="card-body" id="announcementsContainer">
+              <!-- Rendered dynamically by JavaScript -->
+            </div>
+          </article>
+
+        </div>
+      </main>
+
+      <!-- Semantic Footer -->
+      <footer class="main-footer">
+        <p>&copy; 2026 UniCampus - Program Studi Teknik Informatika</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Navigation (Tanpa Framework) -->
+  <div class="bottom-nav">
+    <a href="#" class="nav-item active"><span>📊</span><small>Home</small></a>
+    <a href="#" class="nav-item"><span>📝</span><small>KRS</small></a>
+    <a href="#" class="nav-item"><span>📑</span><small>Nilai</small></a>
+    <a href="#" class="nav-item"><span>👤</span><small>Profil</small></a>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
